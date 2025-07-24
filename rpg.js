@@ -263,8 +263,8 @@ class Guerreiro{
 
 
 
-const defensor = new Guerreiro('Blanka', 120, 80, 35)
-const atacante = new Guerreiro('Sagat', 70, 50, 85)
+const defensor = new Guerreiro('Sagat', 120, 80, 35)
+const atacante = new Guerreiro('Blanka', 70, 50, 85)
 
 
 
