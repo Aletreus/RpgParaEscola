@@ -58,6 +58,7 @@ class Guerreiro{
 
     small(player){
         if(player.smallUsadas < maxsmall){
+            player.smallUsadas ++;
             player.hp = player.hp + 25
             if(player.hp > maxhp){
                 player.hp = maxhp
@@ -69,6 +70,7 @@ class Guerreiro{
 
     medium(player){
         if(player.medUsadas < maxmed){
+            olayer.medUsadas ++;
             player.hp = player.hp + 50
             if(player.hp > maxhp){
                 player.hp = maxhp
@@ -80,6 +82,7 @@ class Guerreiro{
 
     big(player){
         if(player.bigUsadas < maxbig){
+            player.bigUsadas ++;
             player.hp = player.hp + 75
             if(player.hp > maxhp){
                 player.hp = maxhp
@@ -91,6 +94,7 @@ class Guerreiro{
 
     escalibur(player){
         if(player.atkUsadas <= 1){
+            player.atkUsadas ++;
             this.atk += 60
             if(player.atk > maxatk){
                 player.atk = maxatk
@@ -102,7 +106,8 @@ class Guerreiro{
 
     mjolnir(player){
         if(player.atkUsadas <= 1){
-           this.atk += 90
+            player.atkUsadas ++;
+            this.atk += 90
             if(player.atk > maxatk){
                 player.atk = maxatk
             }
@@ -113,7 +118,8 @@ class Guerreiro{
 
     ornamental(player){
         if(player.defUsadas <= 1){
-           this.def += 50
+            player.defUsadas ++;
+            this.def += 50
             if(player.def > maxdef){
                 player.def = maxdef
             }
@@ -124,6 +130,7 @@ class Guerreiro{
 
     pesado(player){
         if(player.defUsadas <= 1){
+            player.defUsadas ++;
             this.def += 80
             if(player.def > maxdef){
                 player.def = maxdef
