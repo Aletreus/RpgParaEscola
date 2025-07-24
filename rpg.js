@@ -17,6 +17,11 @@ class Guerreiro{
         this.hp = hp
         this.def = defesa
         this.atk = ataque
+        this.smallUsadas = 0;
+        this.medUsadas = 0;
+        this.bigUsadas = 0;
+        this.defUsadas = 0;
+        this.atkUsadas = 0;
     }
 
     upgradeatk(ataque){
@@ -52,66 +57,80 @@ class Guerreiro{
     }
 
     small(player){
-        player.hp = player.hp + 25
-        if(player.hp > maxhp){
-            player.hp = maxhp
+        if(player.smallUsadas < maxsmall){
+            player.hp = player.hp + 25
+            if(player.hp > maxhp){
+                player.hp = maxhp
+            }
+            console.log(`Jogador ${this.pl} usou uma poção de cura pequena e agora está com ${player.hp} de vida`)
+            stats()
         }
-        console.log(`Jogador ${this.pl} usou uma poção de cura pequena e agora está com ${player.hp} de vida`)
-        stats()
     }
 
     medium(player){
-        player.hp = player.hp + 50
-        if(player.hp > maxhp){
-            player.hp = maxhp
+        if(player.medUsadas < maxmed){
+            player.hp = player.hp + 50
+            if(player.hp > maxhp){
+                player.hp = maxhp
+            }
+            console.log(`Jogador ${this.pl} usou uma poção de cura média e agora está com ${player.hp} de vida`)
+            stats()
         }
-        console.log(`Jogador ${this.pl} usou uma poção de cura média e agora está com ${player.hp} de vida`)
-        stats()
     }
 
     big(player){
-        player.hp = player.hp + 75
-        if(player.hp > maxhp){
-            player.hp = maxhp
+        if(player.bigUsadas < maxbig){
+            player.hp = player.hp + 75
+            if(player.hp > maxhp){
+                player.hp = maxhp
+            }
+            console.log(`Jogador ${this.pl} usou uma poção de cura grande e agora está com ${player.hp} de vida`)
+            stats()
         }
-        console.log(`Jogador ${this.pl} usou uma poção de cura grande e agora está com ${player.hp} de vida`)
-        stats()
     }
 
     escalibur(player){
-        this.atk += 60
-        if(player.atk > maxatk){
-            player.atk = maxatk
+        if(player.atkUsadas <= 1){
+            this.atk += 60
+            if(player.atk > maxatk){
+                player.atk = maxatk
+            }
+            console.log(`O Jogador ${this.pl} pegou a ESCALIBUR e aumentou seu ataque em 100 de dano.`)
+            stats()
         }
-        console.log(`O Jogador ${this.pl} pegou a ESCALIBUR e aumentou seu ataque em 100 de dano.`)
-        stats()
     }
 
     mjolnir(player){
-        this.atk += 90
-        if(player.atk > maxatk){
-            player.atk = maxatk
+        if(player.atkUsadas <= 1){
+           this.atk += 90
+            if(player.atk > maxatk){
+                player.atk = maxatk
+            }
+            console.log(`O Jogador ${this.pl} pegou O MJOLNIR e aumentou seu ataque em 200.`)
+            stats() 
         }
-        console.log(`O Jogador ${this.pl} pegou O MJOLNIR e aumentou seu ataque em 200.`)
-        stats()
     }
 
     ornamental(player){
-        this.def += 50
-        if(player.def > maxdef){
-            player.def = maxdef
+        if(player.defUsadas <= 1){
+           this.def += 50
+            if(player.def > maxdef){
+                player.def = maxdef
+            }
+            console.log(`O Jogador ${this.pl} pegou o escudo ornamental e aumentou sua defesa em 100.`)
+            stats() 
         }
-        console.log(`O Jogador ${this.pl} pegou o escudo ornamental e aumentou sua defesa em 100.`)
-        stats()
     }
 
     pesado(player){
-        this.def += 80
-        if(player.def > maxdef){
-            player.def = maxdef
+        if(player.defUsadas <= 1){
+            this.def += 80
+            if(player.def > maxdef){
+                player.def = maxdef
+            }
+            console.log(`O Jogador ${this.pl} pegou o escudo pesado e aumentou sua defesa em 100.`)
+            stats()
         }
-        console.log(`O Jogador ${this.pl} pegou o escudo pesado e aumentou sua defesa em 100.`)
-        stats()
     }
 
     critico(player){
