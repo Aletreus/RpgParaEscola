@@ -70,7 +70,7 @@ class Guerreiro{
 
     medium(player){
         if(player.medUsadas < maxmed){
-            olayer.medUsadas ++;
+            player.medUsadas ++;
             player.hp = player.hp + 50
             if(player.hp > maxhp){
                 player.hp = maxhp
