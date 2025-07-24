@@ -250,6 +250,9 @@ class Guerreiro{
         if(player.hp <= 0){
             console.log(`O jogador ${player.pl} Morreu.`)
             alert(`O jogador ${player.pl} Morreu.`)
+            player.hp = 0;
+            player.def = 0;
+            player.atk = 0;
         }
 
         }
