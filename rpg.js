@@ -260,8 +260,8 @@ class Guerreiro{
 
 
 
-const defensor = new Guerreiro('def', 120, 80, 35)
-const atacante = new Guerreiro('atk', 70, 50, 85)
+const defensor = new Guerreiro('Blanka', 120, 80, 35)
+const atacante = new Guerreiro('Sagat', 70, 50, 85)
 
 
 
@@ -299,4 +299,5 @@ defp2.textContent = `DEF: ${atacante.def}/${atacante.def}`
 }
 
 
-stats()
+stats();
+stats();
