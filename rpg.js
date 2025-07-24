@@ -283,7 +283,7 @@ class Guerreiro{
 
 
 const defensor = new Guerreiro('Sagat', 120, 80, 35)
-const atacante = new Guerreiro('Blanka', 70, 50, 85)
+const atacante = new Guerreiro('Blanka', 45, 50, 85)
 
 
 
@@ -322,4 +322,5 @@ defp2.textContent = `DEF: ${atacante.def}/${atacante.def}`
 
 
 stats();
-stats();
+atacante.small(atacante);
+atacante.smallUsadas = 0;
