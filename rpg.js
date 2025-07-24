@@ -58,7 +58,7 @@ class Guerreiro{
 
     small(player){
         if(player.smallUsadas < maxsmall){
-            player.smallUsadas ++;
+            player.smallUsadas = player.smallUsadas + 1;
             player.hp = player.hp + 25
             if(player.hp > maxhp){
                 player.hp = maxhp
@@ -70,7 +70,7 @@ class Guerreiro{
 
     medium(player){
         if(player.medUsadas < maxmed){
-            player.medUsadas ++;
+            player.medUsadas = player.medUsadas + 1;
             player.hp = player.hp + 50
             if(player.hp > maxhp){
                 player.hp = maxhp
@@ -82,7 +82,7 @@ class Guerreiro{
 
     big(player){
         if(player.bigUsadas < maxbig){
-            player.bigUsadas ++;
+            player.bigUsadas = player.bigUsadas + 1;
             player.hp = player.hp + 75
             if(player.hp > maxhp){
                 player.hp = maxhp
@@ -94,7 +94,7 @@ class Guerreiro{
 
     escalibur(player){
         if(player.atkUsadas <= 1){
-            player.atkUsadas ++;
+            player.atkUsadas = player.atkUsadas + 1;
             this.atk += 60
             if(player.atk > maxatk){
                 player.atk = maxatk
@@ -106,7 +106,7 @@ class Guerreiro{
 
     mjolnir(player){
         if(player.atkUsadas <= 1){
-            player.atkUsadas ++;
+            player.atkUsadas = player.atkUsadas + 1;
             this.atk += 90
             if(player.atk > maxatk){
                 player.atk = maxatk
@@ -118,19 +118,23 @@ class Guerreiro{
 
     ornamental(player){
         if(player.defUsadas <= 1){
-            player.defUsadas ++;
+            player.defUsadas = player.defUsadas + 1;
             this.def += 50
+            this.atk += 25
             if(player.def > maxdef){
                 player.def = maxdef
             }
-            console.log(`O Jogador ${this.pl} pegou o escudo ornamental e aumentou sua defesa em 100.`)
+            if(player.atk > maxatk){
+                player.atk = maxatk
+            }
+            console.log(`O Jogador ${this.pl} pegou o escudo ornamental e aumentou sua defesa em 50.`)
             stats() 
         }
     }
 
     pesado(player){
         if(player.defUsadas <= 1){
-            player.defUsadas ++;
+            player.defUsadas = player.defUsadas + 1;
             this.def += 80
             if(player.def > maxdef){
                 player.def = maxdef
