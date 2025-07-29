@@ -8,58 +8,48 @@
 </head>
 <body>
     <div id="gameboard">
-        
         <main id="player1">
             <h2 id="nomep1" class="nome">Nome</h2>
             <h2 id="hpp1" class="hp">HP 100/100</h2>
             <h2 id="atkp1" class="atk">Atk:</h2>
             <h2 id="defp1" class="def">Def:</h2>
-            <input type="button" value="Ataque"
-            onclick="defensor.slash(atacante)" class="slash">
-            <input type="button" value="Small Health Potion"
-            onclick="defensor.small(defensor)" class="small">
-            <input type="button" value="Medium Health Potion"
-            onclick="defensor.medium(defensor)" class="medium">
-            <input type="button" value="Big Health Potion"
-            onclick="defensor.big(defensor)" class="big">
-            <input type="button" value="Escalibur"
-            onclick="defensor.escalibur(defensor)" class="escalibur">
-            <input type="button" value="MJOLNIR"
-            onclick="defensor.mjolnir(defensor)" class="mjolnir">
-            <input type="button" value="Escudo Ornamental"
-            onclick="defensor.ornamental(defensor)" class="ornamental">
-            <input type="button" value="Escudo Pesado"
-            onclick="defensor.pesado(defensor)" class="pesado">
-            <input type="button" value="Tentar crítico"
-            onclick="defensor.critico(atacante)" class="critico">
+
+            <!-- Botões do jogador 1 (Sagat) -->
+            <input type="button" value="Ataque" onclick="defensor.slash(atacante)" class="slash">
+            <input type="button" value="Small Health Potion" onclick="defensor.small(defensor)" class="small">
+            <input type="button" value="Medium Health Potion" onclick="defensor.medium(defensor)" class="medium">
+            <input type="button" value="Big Health Potion" onclick="defensor.big(defensor)" class="big">
+            <input type="button" value="Escalibur" onclick="defensor.escalibur(defensor)" class="escalibur">
+            <input type="button" value="MJOLNIR" onclick="defensor.mjolnir(defensor)" class="mjolnir">
+            <input type="button" value="Escudo Ornamental" onclick="defensor.ornamental(defensor)" class="ornamental">
+            <input type="button" value="Escudo Pesado" onclick="defensor.pesado(defensor)" class="pesado">
+            <input type="button" value="Tentar crítico" onclick="defensor.critico(atacante)" class="critico">
         </main>
-        <img src="sagat.gif" alt="" class="personagem">
+
+        <img src="sagat.gif" alt="Sagat" class="personagem">
+
         <main id="player2"> 
             <h2 id="nomep2" class="nome">Nome</h2>
             <h2 id="hpp2" class="hp">HP 100/100</h2>
             <h2 id="atkp2" class="atk">Atk:</h2>
             <h2 id="defp2" class="def">Def:</h2>
-        <script src="rpg.js"></script>
-        <input type="button" value="Ataque"
-        onclick="atacante.slash(defensor)" class="slash">
-        <input type="button" value="Small Health Potion"
-        onclick="atacante.small(atacante)" class="small">
-        <input type="button" value="Medium Health Potion"
-        onclick="atacante.medium(atacante)" class="medium">
-        <input type="button" value="Big Health Potion"
-        onclick="atacante.big(atacante)" class="big">
-        <input type="button" value="Escalibur"
-        onclick="atacante.escalibur(atacante)" class="escalibur">
-        <input type="button" value="MJOLNIR"
-        onclick="atacante.mjolnir(atacante)" class="mjolnir">
-        <input type="button" value="Escudo Ornamental"
-        onclick="atacante.ornamental(atacante)" class="ornamental">
-        <input type="button" value="Escudo Pesado"
-        onclick="atacante.pesado(atacante)" class="pesado">
-        <input type="button" value="Tentar crítico"
-        onclick="atacante.critico(defensor)" class="critico">
-    </main>
-        <img src="blanka.gif" style="transform: scaleX(-1);" alt="" class="personagem2">
+
+            <!-- Botões do jogador 2 (Blanka) -->
+            <input type="button" value="Ataque" onclick="atacante.slash(defensor)" class="slash">
+            <input type="button" value="Small Health Potion" onclick="atacante.small(atacante)" class="small">
+            <input type="button" value="Medium Health Potion" onclick="atacante.medium(atacante)" class="medium">
+            <input type="button" value="Big Health Potion" onclick="atacante.big(atacante)" class="big">
+            <input type="button" value="Escalibur" onclick="atacante.escalibur(atacante)" class="escalibur">
+            <input type="button" value="MJOLNIR" onclick="atacante.mjolnir(atacante)" class="mjolnir">
+            <input type="button" value="Escudo Ornamental" onclick="atacante.ornamental(atacante)" class="ornamental">
+            <input type="button" value="Escudo Pesado" onclick="atacante.pesado(atacante)" class="pesado">
+            <input type="button" value="Tentar crítico" onclick="atacante.critico(defensor)" class="critico">
+        </main>
+
+        <img src="blanka.gif" alt="Blanka" style="transform: scaleX(-1);" class="personagem2">
     </div>
+
+    <!-- JavaScript no final do body -->
+    <script src="rpg.js"></script>
 </body>
 </html>
