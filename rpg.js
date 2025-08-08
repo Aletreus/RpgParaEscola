@@ -187,7 +187,7 @@ function stats() {
 function registrarAcao() {
     acoesRestantes--;
     if (acoesRestantes <= 0) {
-        setTimeout(trocarTurno, 300);
+        setTimeout(trocarTurno, 50);
     }
 }
 
