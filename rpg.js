@@ -166,7 +166,7 @@ class Guerreiro {
 }
 
 const defensor = new Guerreiro('Sagat', 120, 80, 35);
-const atacante = new Guerreiro('Blanka', 45, 50, 85);
+const atacante = new Guerreiro('Blanka', 70, 50, 85);
 
 // Funções auxiliares
 
@@ -208,5 +208,4 @@ function atualizarBotoes() {
 
 // Inicialização
 stats();
-atacante.small(atacante);
-atacante.smallUsadas = 0;
+
